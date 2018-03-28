@@ -1,0 +1,303 @@
+/*******************************************
+
+Project Name: The Black Keys Discography
+Author/Authors: Quinn Haley
+Date: 2/9/2017
+------------------*GUIDES*------------------
+
+1. UNIVERSAL STYLES (TYPOGRAPHY, ETC)
+2. HEADER $ NAV STYLES
+3. MAIN BODY CONTENT
+4. FOOTER CONTENT
+5. COMMENTS & FORMS
+********************************************
+----------------COLOR GUIDE-----------------
+
+CREAM (BODY) rgb(245,245,245);
+DARK GRAY (TEXT) rgb(100,100,100);
+DARK GREY (HEADER, FOOTER) rgba(20,20,20,.8);
+RED rgb(235,35,35);
+
+********************************************
+--------------TYPOGRAPHY GUIDE--------------
+
+    font-family: 'Candal', sans-serif;
+    font-family: 'Roboto', sans-serif;
+********************************************
+*******************************************/ 						
+
+
+
+/*******************************************
+********************************************
+1. UNIVERSAL STYLES (TYPOGRAPHY, ETC)
+********************************************
+*******************************************/
+
+
+body {
+	background-color: rgb(245,245,245);
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+main {
+	flex: 1;
+}
+img {
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Candal', sans-serif;
+	color: rgb(245,245,245);
+	text-shadow: 4px 4px rgb(0,0,0), -1px 2px rgb(0,0,0), 2px -1px rgb(0,0,0);
+}
+p, blockquote, ul, ol, li, form {
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+h1 {
+	font-size: 3.5em;
+}
+h2 {
+	font-size: 2.5em;
+}
+p {
+	font-size: 1.215em;
+}
+a:hover {
+	color: #fff;
+}
+
+
+/*******************************************
+********************************************
+2. HEADER $ NAV STYLES
+********************************************
+*******************************************/
+
+
+header {
+	text-align: center;
+	background-color: rgba(20,20,20,.8);
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	height: 58px;
+}
+header ul{
+	color: rgb(235,35,35);
+	text-shadow: none;
+}
+.header {
+	font-size: 2em;
+	padding: 5px 20px 0 0;
+	margin-bottom: 5px;
+	font-family: 'Candal', sans-serif;
+	color: rgb(235,35,35);
+}
+.header a:hover {
+	color: rgb(235,35,35);
+}
+header li {
+	display: inline-block;
+	font-size: 1.115em;
+	height: 5px;
+}
+header li a{
+	margin: 0 20px;
+	color: rgb(235,35,35);
+	text-align: center;
+}
+.tp-bar {
+	background-color: rgb(120,120,120);
+	border-bottom: 5px solid rgb(30,30,30);
+	height: 53px;
+}
+.albums {
+	margin-bottom: 53px;
+}
+
+
+/*******************************************
+********************************************
+3. MAIN BODY CONTENT
+********************************************
+*******************************************/
+
+
+.banner {
+	width: 100%;
+	height: 100%;
+}
+#about, #albums, #tp-form {
+	height: 58px;
+}
+.albums a {
+	text-decoration: none;
+}
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	text-decoration: none;
+}
+.lightbox h1, .lightbox ol, .lightbox li, .lightbox p {
+	color: #fff;
+	text-shadow: 
+}
+.close {
+	position: absolute;
+	right: 10px;
+	margin-left: 10px;
+	text-decoration: underline;
+	color: rgb(175,175,175);
+}
+.lightbox li {
+	font-size: 2em;
+}
+.lightbox p, .lightbox li {
+	text-align: left;
+}
+.lightbox p, {
+	font-size: 1.5em;
+}
+.lightbox h1 {
+	margin-top: 5%;
+	font-size: 4em;
+	text-shadow: none;
+}
+.lightbox img {
+	height: 80%;
+}
+.lightbox ol, .lightbox img {
+	margin-left: 2%;
+}
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+
+/*******************************************
+********************************************
+4. FOOTER CONTENT
+********************************************
+*******************************************/
+
+
+footer {
+	background-color: rgba(20,20,20,.8);
+	color: rgb(235,35,35);
+}
+footer p {
+	color: rgb(235,35,35);
+}
+footer p, footer ul {
+	padding-top: 15px;
+	margin: 0;
+}
+footer ul, footer p {
+	text-align: left;
+}
+footer p:nth-child(odd) {
+	margin: 30px 0 0 50px;
+	font-size: 1.215em;
+}
+footer p:nth-child(even) {
+	margin-left: 50px;
+	font-size: 1.35em;
+}
+footer ul {
+	list-style: none;
+	font-size: 1.25em;
+}
+footer a {
+	color: rgb(235,35,35);
+}
+
+
+/*******************************************
+********************************************
+5. COMMENTS & FORMS
+********************************************
+*******************************************/
+
+
+form {
+	border-right: 1px dotted #000;
+	border-left: 1px dotted #000;
+	padding: 10px;
+}
+p.form {
+	text-align: right;
+}
+.congrats {
+	display: none;
+}
+.congrats:target {
+	outline: none;
+	display: block;
+}
+.hide {
+	float: right;
+	margin-left: 10px;
+	text-decoration: underline;
+	color: rgb(175,175,175);
+}
+#hidden h1 {
+	text-align: center;
+}
+
+
+/*******************************************
+********************************************
+6. Media Queries
+********************************************
+*******************************************/
+
+
+@media (max-width: 1080px) {
+	.sechs.columns {
+		width: 100%;
+		margin-left: 0;
+		float: none;
+	}
+	header {
+		height: 68px;
+	}
+	.header {
+		font-size: 2.5em;
+	}
+	header li {
+		font-size: 1.5em;
+	}
+	.tp-bar {
+		height: 63px;
+	}
+	#about, #albums, #tp-form {
+	height: 68px;
+	}
+	.lightbox img {
+		height: 55%;
+	}
+	.lightbox p {
+		font-size: 1.6em;
+	}
+}
